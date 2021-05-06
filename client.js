@@ -9,19 +9,7 @@ const connect = function () {
   conn.on("connect", () => {
     console.log('Successfully connected to game server');
     conn.write('Name: SJ');
-
-    let num = 15;
-    holdTime = 50;
-    for (let i = 0; i < num; i ++) {
-      setTimeout(() => {
-        setTimeout(() => {
-          conn.write('Move: left');          
-        }, holdTime);
-        conn.write('Move: down');
-      }, holdTime);
-      holdTime += 50;
-    }
-
+    conn.write('Say: Do you see my message?')
   });
 
   conn.on("data", (message) => {
