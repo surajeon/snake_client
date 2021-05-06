@@ -13,8 +13,10 @@ const handleUserInput = (key) => {
     connection.write('Move: down');
   } else if (key === 'd') {
     connection.write('Move: right');
-  } else {
-    return false;
+  } 
+
+  if (key === "p") {
+    connection.write('Is this working?');
   }
 }
 
